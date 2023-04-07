@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
   <title>My Bank</title>
   <link rel="stylesheet" href="look.css">
+  <script>
+    function login() {
+      // Get the username and password from the form
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+       // Redirect the user to the dashboard page
+       window.location.href = "welcome.html";
+    }
+  </script>
 </head>
 <body>
   <header>
     <h1>Welcome to My Bank</h1>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="contact.html">Contact Us</a></li>
@@ -17,29 +26,19 @@
     </nav>
   </header>
   <main>
-    <!-- Replace this section with the contents of index.html -->
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <title>My Bank</title>
-      <link rel="stylesheet" href="look.css">
-    </head>
-    <body>
-      <section id="login">
-        <h2>Login</h2>
-        <form action="dashboard.html" method="post">
-          <label for="username">Username</label>
-          <input type="text" id="username" name="username" required>
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" required>
-          <input type="submit" value="Login">
-        </form>
-      </section>
-    </body>
-    </html>
+    <section id="login">
+      <h2>Login</h2>
+      <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <input type="button" value="Login" onclick="login()">
+      </form>
+    </section>
   </main>
   <footer>
-    <p>&copy; 2023 My Bank. All rights reserved.</p>
+    <p>&copy; 2021 My Bank. All rights reserved.</p>
   </footer>
 </body>
 </html>
